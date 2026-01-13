@@ -12,3 +12,12 @@ class Hero(val name: String) {
         println("$name повысил уровень до $level")
     }
 }
+
+fun main() {
+    val hero = Hero("Утер")
+    hero.health = 140
+    println(hero.health)
+    println(hero.stamina)
+//    hero.level = 25
+    hero.levelUp()
+}
