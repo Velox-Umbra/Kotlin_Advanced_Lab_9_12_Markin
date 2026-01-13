@@ -24,4 +24,6 @@ fun main() {
     val betterSword = sword.copy(quantity = 2, name = "Железный меч")
     println(sword.toString())
     println(betterSword.toString())
+    val(id, name, quantity) = betterSword        //Декомпозиция
+    println("ID:$id name:$name quantity:$quantity")
 }
