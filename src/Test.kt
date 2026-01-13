@@ -13,6 +13,17 @@ data class Item(
         return "ID:$id name:$name quantity:$quantity"
     }
 }
+abstract class Human(val name: String) {
+    abstract fun hello()
+    abstract var age: Int
+}
+
+class Person(name: String) : Human(name) {
+    override var age: Int = 1
+    override fun hello() {
+        println("My name is $name")
+    }
+}
 fun main() {
 //    val hero = Hero("Утер")
 //    hero.health = 140
@@ -20,10 +31,12 @@ fun main() {
 //    println(hero.stamina)
 ////    hero.level = 25
 //    hero.levelUp()
-    val sword = Item(1, "Sword", 1)
-    val betterSword = sword.copy(quantity = 2, name = "Железный меч")
-    println(sword.toString())
-    println(betterSword.toString())
-    val(id, name, quantity) = betterSword        //Декомпозиция
-    println("ID:$id name:$name quantity:$quantity")
+//    val sword = Item(1, "Sword", 1)
+//    val betterSword = sword.copy(quantity = 2, name = "Железный меч")
+//    println(sword.toString())
+//    println(betterSword.toString())
+//    val(id, name, quantity) = betterSword        //Декомпозиция
+//    println("ID:$id name:$name quantity:$quantity")
+    val nikolay: Person = Person("Nikolay")
+    val dima: Human = Person("Dmitriy")
 }
